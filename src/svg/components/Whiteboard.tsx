@@ -8,7 +8,6 @@ import SelectionPane from "./SelectionPane";
 import CommandsKey from "../../shared/CommandsKey";
 import Controls from "./Controls";
 import Box from "./Box";
-import { ZoomControl } from "./ZoomControl";
 
 export const Whiteboard: React.FC = () => {
   const { getAllBoxIds, subscribeToBoxIds } = useWhiteboard();

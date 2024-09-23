@@ -1,5 +1,5 @@
 // src/App.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Whiteboard from "./canvas/components/Whiteboard";
 import { WhiteboardProvider, Whiteboard as WhiteboardSVG } from "./svg";

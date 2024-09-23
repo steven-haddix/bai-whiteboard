@@ -33,32 +33,22 @@ const Whiteboard: React.FC = () => {
     selectionEndRef,
     startSelection,
     updateSelection,
-    endSelection,
-    getSelectionRect,
     selectAllBoxes,
     toggleBoxSelection,
     clearSelectedBoxes,
-  } = useSelection(boxes, boxPositions, boxDimensions, zoom, offsetRef.current);
+  } = useSelection(boxes, boxPositions, boxDimensions);
 
-  const {
-    dragState,
-    resizingBoxIdRef,
-    resizeCornerRef,
-    startResize,
-    handleResize,
-    handleDrag,
-    checkForResize,
-    endDragResize,
-  } = useDragAndResize(
-    boxes,
-    boxPositions,
-    boxDimensions,
-    selectedBoxIds,
-    setBoxPositions,
-    updateBoxPosition,
-    updateBoxDimension,
-    zoom,
-  );
+  const { dragState, resizingBoxIdRef, startResize, handleResize, handleDrag, checkForResize, endDragResize } =
+    useDragAndResize(
+      boxes,
+      boxPositions,
+      boxDimensions,
+      selectedBoxIds,
+      setBoxPositions,
+      updateBoxPosition,
+      updateBoxDimension,
+      zoom,
+    );
 
   const getRawPoint = useCallback((e: React.MouseEvent<HTMLCanvasElement> | Touch): Point => {
     const canvas = canvasRef.current;

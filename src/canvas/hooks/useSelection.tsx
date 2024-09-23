@@ -6,8 +6,6 @@ export const useSelection = (
   boxes: Box[],
   boxPositions: Record<number, BoxPosition>,
   boxDimensions: Record<number, BoxDimension>,
-  zoom: number,
-  offset: Point,
 ) => {
   const [selectedBoxIds, setSelectedBoxIds] = useState<Set<number>>(new Set());
   const selectionStartRef = useRef<Point | null>(null);

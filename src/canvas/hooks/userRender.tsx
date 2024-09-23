@@ -16,13 +16,7 @@ export const useRender = (
   const requestIdRef = useRef<number>();
 
   const drawBox = useCallback(
-    (
-      ctx: CanvasRenderingContext2D,
-      id: number,
-      position: BoxPosition,
-      dimension: BoxDimension,
-      isSelected: boolean,
-    ) => {
+    (ctx: CanvasRenderingContext2D, position: BoxPosition, dimension: BoxDimension, isSelected: boolean) => {
       ctx.strokeStyle = isSelected ? "blue" : "black";
       ctx.lineWidth = isSelected ? 2 : 1;
       ctx.strokeRect(position.x, position.y, dimension.width, dimension.height);
@@ -67,7 +61,7 @@ export const useRender = (
       const position = boxPositions[box.id];
       const dimension = boxDimensions[box.id];
       if (position && dimension) {
-        drawBox(ctx, box.id, position, dimension, selectedBoxIds.has(box.id));
+        drawBox(ctx, position, dimension, selectedBoxIds.has(box.id));
       }
     });
 
