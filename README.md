@@ -2,6 +2,10 @@
 
 This project demonstrates two approaches to implementing a whiteboard application using React and JavaScript. It showcases a robust SVG implementation with advanced features, alongside a basic Canvas implementation to highlight performance differences.
 
+## Live Demo
+
+Check out the live demo of the project: [Whiteboard App Demo](https://steven-haddix.github.io/bai-whiteboard/)
+
 ## Quick Start
 
 1. Clone the repository
