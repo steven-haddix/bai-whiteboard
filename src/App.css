@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+html,
+body {
+  overscroll-behavior-x: none;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -37,4 +42,47 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-buttons button {
+  padding: 5px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 50px;
+  min-width: 100px;
+}
+
+.toggle-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.whiteboard-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
 }
