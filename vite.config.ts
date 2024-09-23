@@ -13,6 +13,7 @@ const profiling = isProduction && {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: isProduction ? "/bai-whiteboard/" : "/",
   plugins: [
     nodePolyfills({
       include: ["events"],
